@@ -64,6 +64,13 @@ let cosmetics = [
         img:"perfume.PNG",
         quote:"good fragnance"
     },
+    {
+        name:"Nail Polish",
+        title:"Salon",
+        wikipidia:"https://www.walmart.com/c/brand/salon-perfect-nails",
+        img:"nail.jpg",
+        quote:"Color your nails"
+    },
 ]
 
 function  initializer() {
@@ -86,7 +93,7 @@ function cosmoChange(cosmoIndex) {
     document.querySelector("#cosmo-link a").href = cosmetics [cosmoIndex]. wikipidia;
 }
 
-// sjlaskasjljdksdj
+// animation on name
 
 
 let isOpen = false;
@@ -98,11 +105,7 @@ $(document).ready(function(){
         $("#menu ul").delay(300).animate({opacity:"1"});
         $("#menu ul").css("visibility","visible");
         $("#menu_circle_layer").animate({height:'450px',width:'450px'});
-
-        $("#social_media").animate({height:'400px',width:'400px'});
-        $("#container").delay(300).animate({opacity:"1"});
-        $("#container").css("visibility","visible");
-        console.log("here")
+    
         isOpen = true;
         $("#menu ul").css('display', 'block')
     });
@@ -110,14 +113,11 @@ $(document).ready(function(){
        console.log(isOpen);
        if (isOpen === true) {
             $("#main").css("display","none");
+            $("#menu_circle_layer").css("display","none");
             isOpen = false;
-        $("#menu ul").style('display', 'none')            
+        $("#menu ul").css('display', 'none')            
        }
        
     });
 });
 
-function func() {
-alert("akjwgfkuawfk");
-    document.querySelector(".invisible").style.opacity=1;
-}
