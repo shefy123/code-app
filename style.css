@@ -8,7 +8,9 @@ body {
     background-position: center;
     background-size: cover;
 }
-
+html,body {
+    height:100% ;
+}
 .celebrity-img-div {
     display: flex;
     align-items: center;
